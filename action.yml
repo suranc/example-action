@@ -1,0 +1,15 @@
+name: 'Example GitHub Action'
+description: 'This is an example GitHub Action that will append "test" to input'
+inputs:
+  example-input:
+    description: 'Input to modify'
+    required: true
+    default: ''
+outputs:
+  example-output:
+    description: 'Output from with "test" appended'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.example-input }}
